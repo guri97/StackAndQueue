@@ -46,6 +46,15 @@
             stack.DisplayStack();
             stack.Pop();
             stack.DisplayStack();
+
+            //*********Queue**************//
+            Queue queue = new Queue();
+            queue.Enqueue(node1);
+            queue.Enqueue(node2);
+            queue.Enqueue(node3);
+            queue.Display();
+
+
         }
     }
 }

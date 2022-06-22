@@ -78,6 +78,22 @@ namespace Day13_StackProblem
 
 
         }
+        public void AppendNode(Node node)
+        {
+            if (Head == null && Tail == null)
+            {
+                Head = node;
+                Tail = node;
+
+            }
+            else
+            {
+                Tail.next = node;
+                Tail = node;
+
+            }
+
+        }
         //this is to print for the both uc2 and uc3
         public void printList()
         {
@@ -117,23 +133,16 @@ namespace Day13_StackProblem
         }
         public void DeletingNodeAtEnd()
         {
-            if (this.Head != null)
+            if (this.Head == null)
             {
-                if (this.Head.next == null)
-                {
-                    this.Head = null;
-                }
-                else
-                {
-                    Node temp = this.Head;
-
-                    while (temp.next.next != null)
-                        temp = temp.next;
-                    Node lastNode = temp.next;
-                    temp.next = null;
-                    lastNode = null;
-                }
+                Console.WriteLine("nothig to delete");
             }
+            Node temp = this.Head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
 
         }
         public void InsertNode(Node NewNode, Node PreviousNode)
