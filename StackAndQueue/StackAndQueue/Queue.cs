@@ -24,13 +24,17 @@ namespace Day13_StackProblem
         public void Display()
         {
             Console.WriteLine("Queue:");
-            linkedList.Display();
+            linkedList.QueueDisplay();
 
         }
         public void Top()
         {
             var val = linkedList.Head;
             Console.WriteLine(val.data);
+        }
+        public void deenque()
+        {
+            linkedList.DeletingNodeAtEnd();
         }
     }
 

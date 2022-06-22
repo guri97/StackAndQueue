@@ -61,6 +61,21 @@ namespace Day13_StackProblem
                 temp = temp.next;
             }
         }
+        internal void QueueDisplay()
+        {
+            Node temp = Head;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+                Console.Write("Linked list");
+            while (temp != null)
+            {
+                Console.Write(temp.data);
+                if (temp.next != null)
+                    Console.Write("->");
+                temp = temp.next;
+            }
+        }
         public void append(int newdata)
         {
             Node new_node = new Node(newdata);//creating new node
