@@ -27,6 +27,9 @@ namespace Day13_StackProblem
             var val = linkedList.Head;
             Console.WriteLine(val.data);
         }
-
+        public void Pop()
+        {
+            linkedList.DeletingNodeAtEnd();
+        }
     }
 }
